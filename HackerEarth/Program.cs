@@ -35,11 +35,11 @@ namespace HackerEarth
 
             #region Constructors
             /// <summary>
-            /// Any one time initializations should be done here
+            /// Creates a new Solution
             /// </summary>
             public Solution()
             {
-                
+                //Any one time initialization should be done here
             }
             #endregion
 
@@ -49,7 +49,22 @@ namespace HackerEarth
             /// </summary>
             public void Solve()
             {
-                //Solution should be implemented in here
+                //Implement solution here
+            }
+            #endregion
+
+            #region Utilities
+            /// <summary>
+            /// Swaps two elements
+            /// </summary>
+            /// <typeparam name="T">Type of element to swap</typeparam>
+            /// <param name="a">First element to swap</param>
+            /// <param name="b">Second element to swap</param>
+            public static void Swap<T>(ref T a, ref T b)
+            {
+                T t = a;
+                a = b;
+                b = t;
             }
             #endregion
         }
