@@ -5,6 +5,7 @@
  *          2017-2018             *
 \* ============================== */
  
+//Uncomment this if there are multiple test cases
 //#define TESTCASES
  
 using System;
@@ -49,7 +50,7 @@ namespace HackerEarth
             /// </summary>
             public void Solve()
             {
-                //Implement solution here
+                //Solution goes here
             }
             #endregion
 
@@ -1157,6 +1158,19 @@ namespace HackerEarth
         /// <param name="value">Value to find</param>
         /// <returns>True if the value was found, false otherwise</returns>
         public static bool Contains<T>(this T[] array, T value) => Array.IndexOf(array, value) != -1;
+
+        /// <summary>
+        /// Creates a new instance shallow copy of the array
+        /// </summary>
+        /// <typeparam name="T">Type of the array</typeparam>
+        /// <param name="array">Array to copy</param>
+        /// <returns>The new copy of the array</returns>
+        public static T[] Copy<T>(this T[] array)
+        {
+            T[] copy = new T[array.Length];
+            Array.Copy(array, copy, array.Length);
+            return copy;
+        }
  
         /// <summary>
         /// Enumerates the contents of an ArraySegment
